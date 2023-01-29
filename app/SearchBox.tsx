@@ -1,5 +1,5 @@
 "use client";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 function SearchBox() {
@@ -14,14 +14,14 @@ function SearchBox() {
   return (
     <form
       onSubmit={handleSearch}
-      className="max-w-6xl mx-auto justify-between  items-center px-5"
+      className="max-w-6xl mx-auto justify-between  items-center px-5 flex"
     >
       <input
         placeholder="Search Keys..."
         type="text"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        className="flex-1 outline-none w-full h-14 rounded-sm placeholder:bg-gray-500 text-gray-500 bg-transparent dark:text-orange-400"
+        className="flex-1 outline-none w-full h-14 rounded-sm dark:bg-gray-500 text-gray-500 bg-transparent dark:text-orange-400"
       />
       <button
         disabled={!search}

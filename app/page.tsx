@@ -4,6 +4,8 @@ import React from "react";
 
 async function Homepage() {
   const news: NewsResponse = await fetchNews(categories.join(","));
+
+  console.log(news);
   return <div>{/* NewsList news */}</div>;
 }
 
